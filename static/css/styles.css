@@ -1,0 +1,189 @@
+button {
+    color: white;
+    background-color: rgb(165, 152, 111);
+    border: none;
+    padding: 10px;
+    height: 50px;
+    width: 200px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(140, 128, 95);
+}
+
+/* Input box for messages */
+#inputtextbox {
+    flex: 1;
+    border: 5px solid rgb(15, 75, 75);
+    padding: 10px 15px;
+    height: 50px;
+    background-color: #f3f3f3;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+#inputtextbox:focus {
+    border-color: rgb(0, 128, 90);
+}
+
+/* Submit button for chat */
+#submitbutton {
+    color: white;
+    background-color: rgb(15, 75, 75);
+    border: none;
+    padding: 10px;
+    width: 14%;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    transition: background 0.3s ease;
+}
+
+#submitbutton:hover {
+    background-color: rgb(0, 128, 90);
+}
+
+/* Outer container */
+.outercontainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 5px solid #ccc;
+    border-radius: 50px;
+    background-color: white;
+}
+
+/* Chat area */
+.conversationcontainer {
+    border: 5px solid #ccc;
+    padding: 10px;
+    height: 500px;
+    background-color: #f3f3f3;
+    overflow-y: auto;
+    border-radius: 50px;
+}
+
+/* Bot messages - soft blue */
+.bot {
+    color: white;
+    background-color: #3A7CA5; /* Muted blue */
+    padding: 10px 14px;
+    border-radius: 12px;
+    float: left;
+    clear: both;
+    max-width: 80%;
+    margin: 5px 0;
+    word-wrap: break-word;
+}
+
+/* User messages - pastel teal */
+.user {
+    color: white;
+    background-color: #5AB1A0; /* Soft teal */
+    padding: 10px 14px;
+    border-radius: 12px;
+    float: right;
+    clear: both;
+    max-width: 80%;
+    margin: 5px 0;
+    word-wrap: break-word;
+}
+
+/* Typing indicator - lighter blue */
+.typing-indicator {
+    background-color: #3A7CA5; /* Same as bot bubble */
+    color: white;
+    padding: 8px 14px;
+    border-radius: 12px;
+    margin: 5px 0;
+    font-style: italic;
+}
+
+/* Form alignment */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form spacing */
+form {
+    margin: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Page padding */
+body {
+    margin: 50px;
+    background-color: #fafafa;
+}
+
+/* Scrollbar styling */
+.conversationcontainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+.conversationcontainer::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 8px;
+}
+
+.conversationcontainer::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+}
+
+.conversationcontainer::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Typing indicator bubble */
+.typing-indicator {
+    display: inline-block;
+    background-color: rgb(0, 128, 90);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 12px;
+    margin: 5px 0;
+    font-style: italic;
+}
+
+.typing-dots {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.typing-dots span {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 2px;
+    animation: blink 1.4s infinite both;
+}
+
+.typing-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0% { opacity: 0.2; }
+    20% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
